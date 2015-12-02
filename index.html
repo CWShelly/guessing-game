@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Dec 1 Assignment
+  </title>
+</head>
+<body>
+  <h1> What this page strives to do. </h1>
+  <p>This page aims to gather information from the user engaging with the page through the use of input prompts which will assign the information to a variable. Having temporarily stored that information, the script on the page will further engage the user by using that information to communicate with the user via alert boxes that concatenate a string and the variable. </p>
+
+  <h2> Getting to know me </h2>
+  <p> This page also strives to reveal information about the person behind the page through further use of input prompts, asking yes or no questions, and letting the user know how many questions they got right. </p>
+
+  <h3> About me</h3>
+  <p> I don't live in Chicago. I have brown hair. I am not an avid golfer. </p>
+
+
+
+
+<script>
+
+var count = 0;
+var user = prompt("What is your name?");
+alert('Nice to meet you ' + user + ' enjoy the donuts.');
+alert('Hope you have a good week,' + user);
+
+var counter = 0;
+
+var answer1 = prompt("Do I live in Chicago? Input yes or no only, please.");
+var answerOne = answer1.toUpperCase();
+alert("You just said " + answerOne);
+if (answerOne == "YES") {alert("No, I live in Seattle."); counter += 0; }
+else if (answerOne == "NO") { alert("Right. I live in Seattle, not Chicago."); counter +=1;} alert("You have " + counter + " right so far " + user);
+
+
+var answer2 = prompt("Do I have brown hair? Again, input yes or no only, please.");
+var answerTwo = answer2.toUpperCase();
+alert("You just said " + answerTwo);
+
+if (answerTwo == "YES") {alert("Yep. I do."); counter += 1;}
+else if (answerTwo == "NO") {alert("Nope. Hair's brown."); counter += 0;}
+alert("You have " + counter + " right so far " + user);
+
+
+
+var answer3 = prompt("Am I an avid golfer? Input yes or no only, please.");
+var answerThree = answer3.toUpperCase();
+alert("You said " + answerThree);
+
+if(answerThree == "YES") {alert("No, I'm not really into golf."); counter +=0;}
+else if (answerThree == "NO") {alert ("Right. I'm not much of a golf person."); counter +=1;}
+alert("You have " + counter + " right so far " + user);
+
+
+
+var answer4 = prompt("Do I play piano?");
+var answerFour = answer4.toUpperCase();
+alert("You said " + answerFour);
+
+if(answerFour == "YES") {alert("No. I don't tickle the ivories."); counter += 0;}
+
+else if (answerFour == "NO") {alert("Right. I have no musical talent whatsover. Not even on spoons."); counter += 1;};
+
+alert("You have " + counter + " right so far " + user);
+
+var answer5 = prompt("Have I been to Prague?");
+var answerFive = answer5.toUpperCase();
+alert("You said " + answerFive);
+
+if (answerFive == "YES") {alert("Nope. Never been. Would like to, though."); counter +=0;}
+
+else if(answerFive == "NO") {alert("Right. I haven't. Might be fun, though."); counter +=1;}
+
+alert("You have " + counter + " right so far " + user);
+
+
+alert("You got " + counter + " correct, " + user + ". I don't live in Chicago. I do have brown hair. I am not an avid golfer. I don't play piano, and I haven't been to Prague.");
+
+
+</script>
+
+</body>
+</html>
