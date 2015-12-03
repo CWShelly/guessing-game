@@ -17,71 +17,7 @@
 
 
 
-<script>
-
-var count = 0;
-var user = prompt("What is your name?");
-alert('Nice to meet you ' + user + ' enjoy the donuts.');
-alert('Hope you have a good week,' + user);
-
-var counter = 0;
-
-var answer1 = prompt("Do I live in Chicago? Input yes or no only, please.");
-var answerOne = answer1.toUpperCase();
-alert("You just said " + answerOne);
-console.log("For question 1, " + user + " said " + answerOne);
-
-if (answerOne == "YES") {alert("No, I live in Seattle."); counter += 0; }
-else if (answerOne == "NO") { alert("Right. I live in Seattle, not Chicago."); counter +=1;} alert("You have " + counter + " right so far " + user);
-
-var answer2 = prompt("Do I have brown hair? Again, input yes or no only, please.");
-var answerTwo = answer2.toUpperCase();
-alert("You just said " + answerTwo);
-console.log("For question 2, " + user + " said " + answerTwo);
-
-if (answerTwo == "YES") {alert("Yep. I do."); counter += 1;}
-else if (answerTwo == "NO") {alert("Nope. Hair's brown."); counter += 0;}
-alert("You have " + counter + " right so far " + user);
-
-
-
-var answer3 = prompt("Am I an avid golfer? Input yes or no only, please.");
-var answerThree = answer3.toUpperCase();
-alert("You said " + answerThree);
-console.log("For question 3, " + user + " said " + answerThree);
-
-if(answerThree == "YES") {alert("No, I'm not really into golf."); counter +=0;}
-else if (answerThree == "NO") {alert ("Right. I'm not much of a golf person."); counter +=1;}
-alert("You have " + counter + " right so far " + user);
-
-
-
-var answer4 = prompt("Do I play piano?");
-var answerFour = answer4.toUpperCase();
-alert("You said " + answerFour);
-console.log("For question 4, " + user + " said " + answerFour);
-
-if(answerFour == "YES") {alert("No. I don't tickle the ivories."); counter += 0;}
-
-else if (answerFour == "NO") {alert("Right. I have no musical talent whatsover. Not even on spoons."); counter += 1;};
-
-alert("You have " + counter + " right so far " + user);
-
-var answer5 = prompt("Have I been to Prague?");
-var answerFive = answer5.toUpperCase();
-alert("You said " + answerFive);
-console.log("For question 5, " + user + " said " + answerFive);
-
-if (answerFive == "YES") {alert("Nope. Never been. Would like to, though."); counter +=0;}
-
-else if(answerFive == "NO") {alert("Right. I haven't. Might be fun, though."); counter +=1;}
-
-alert("You have " + counter + " right so far " + user);
-
-
-alert("You got " + counter + " correct, " + user + ". I don't live in Chicago. I do have brown hair. I am not an avid golfer. I don't play piano, and I haven't been to Prague.");
-
-
+<script src = "app.js">
 </script>
 
 </body>
