@@ -74,12 +74,12 @@ while (user > answer) {
   user = parseInt(prompt('You said ' + user + ' Guess again. Too high.'))
 }
 
-console.log(user);
+
 while (user < answer) {
   user = parseInt(prompt('You said ' + user + ' Guess again. Too low.'))
 }
 
-console.log(user);
+
 while (user === answer) {
   alert("yes that's it");
   break;
@@ -90,8 +90,6 @@ alert("Last question.");
 
 
 var question = prompt("Name a lead singer of Van Halen").toUpperCase();
-
-
 
 var answers = ['DAVID LEE ROTH', 'SAMMY HAGAR', 'GARY CHERONE', 'ROTH', 'HAGAR', 'CHERONE'];
 console.log(answers);
