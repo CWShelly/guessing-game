@@ -1,126 +1,126 @@
 
 
 
-alert("this is working so far.");
-
-
 var user = prompt("What is your name?");
-alert('Nice to meet you ' + user + ' enjoy the donuts.');
-alert('Hope you have a good week,' + user);
 
+var half = document.getElementById('half');
+var halfOne = document.getElementById('halfOne');
 var one = document.getElementById('one');
+
+var oneHalf = document.getElementById('oneHalf');
+
+
 var two = document.getElementById('two');
-var three = document.getElementById('three');
-var four = document.getElementById('four');
-var five = document.getElementById('five');
-var six = document.getElementById('six');
-var seven = document.getElementById('seven');
 
 
 
+half.textContent = 'Nice to meet you ' + user + '.';
+
+counter = 0;
 
 function question1() {
+
+one.textContent = 'First question: Do I live in Chicago?';
+
 var answer1 = prompt("Do I live in Chicago? Input yes or no only, please.").toUpperCase();
 
-alert("You just said " + answer1);
+halfOne.textContent = "You just said " + answer1 + ".";
 console.log("For question 1, " + user + " said " + answer1);
 
 if (answer1 == "YES") {one.className ='wrong';
-
-  one.textContent = "Nope. I live in Seattle.";
-
-   }
-else if (answer1 == "NO") { one.className = 'right'; one.textContent = "Right. I live in Seattle.";
-
+  one.textContent = "You said " + answer1 + " Nope. I live in Seattle.";
+} else if (answer1 == "NO") { one.className = 'right'; one.textContent = "You said " + answer1 + " Right. I live in Seattle."; counter ++;
+oneHalf.textContent = "You have " + counter + " correct."
 }
 };
 
 
 
 function question2(){
-var answer4 = prompt("Do I play piano?").toUpperCase();
+  halfOne.textContent = "Second question: Do I play piano?";
+  var answer4 = prompt("Do I play piano?").toUpperCase();
 
-alert("You said " + answer4);
-console.log("For question 4, " + user + " said " + answer4);
+  console.log("For question 4, " + user + " said " + answer4);
 
-if(answer4 == "YES") {two.className ='wrong'; two.textContent = "Nope. I can't even play Chopsticks.";}
-
-else if (answer4 == "NO") {two.className = 'right'; two.textContent = "Right. I have no musical talent whatsover. Can't even play spoons.";
-
+  if(answer4 == "YES") {one.className ='wrong'; one.textContent = "You said " + answer4 + " Nope. I can't even play Chopsticks.";
 }
+  else if (answer4 == "NO") {one.className = 'right'; one.textContent = "You said " + answer4 + " Right. I have no musical talent whatsover. Can't even play spoons."; counter ++; oneHalf.textContent = "You have " + counter + " correct."
+  }
+  };
 
-}
 function question3() {
+
+halfOne.textContent = 'Third question: Have I been to Prague?';
 
 var answer5 = prompt("Have I been to Prague?").toUpperCase();
 
-alert("You said " + answer5);
+
 console.log("For question 5, " + user + "said " + answer5);
 
-if (answer5 == "YES") {three.className ='wrong';
-  three.textContent = "No. Would like to, though.";}
+if (answer5 == "YES") {one.className ='wrong';
+  one.textContent = "You said " + answer5 +" No. Would like to, though. I mean, why not Prague?";}
 
-else if(answer5 == "NO") {three.className = 'right'; three.textContent = "Right. I haven't. Might be fun, though."}
+else if(answer5 == "NO") {one.className = 'right'; one.textContent = "You said " + answer5 + " Right. I haven't been to Prague. Might be fun, though."; counter ++; oneHalf.textContent = "You have " + counter + " correct."}
+
 }
 
 
 function question4(){
+
+  halfOne.textContent = 'Fourth question: Am I an avid golfer?';
   var answer3 = prompt("Am I an avid golfer? Input yes or no only, please.").toUpperCase();
 
-  alert("You said " + answer3);
+
   console.log("For question 4, " + user + " said " + answer3);
 
-  if(answer3 == "YES") {four.className ='wrong'; four.textContent = "No. Not really. We can attempt mini golf, though.";}
-  else if (answer3 == "NO") {four.className = 'right'; four.textContent = " Right. Not really."}
-
+  if(answer3 == "YES") {one.className ='wrong'; one.textContent = "You said " + answer3 + ". No. Not really. We can attempt mini golf, though.";}
+  else if (answer3 == "NO") {one.className = 'right'; one.textContent = "You said " + answer3 + ". Right. Not really a golfer."; counter ++; oneHalf.textContent = "You have " + counter + " correct."}
 
 
 }
 
 function question5(){
+  halfOne.textContent = "Fifth question: Do I have brown hair?";
   var answer2 = prompt("Do I have brown hair? Again, input yes or no only, please.").toUpperCase();
 
-  alert("You just said " + answer2);
   console.log("For question 2, " + user + " said " + answer2);
 
-  if (answer2 == "YES") {five.className = 'right';
-    five.textContent = "Right. I do.";
+  if (answer2 == "YES") {one.className = 'right';
+    one.textContent = "You said " + answer2 + ". Right. I do have brown hair."; counter ++; oneHalf.textContent = "You have " + counter + " correct.";
 }
-  else if (answer2 == "NO") {five.className = 'wrong';
-    five.textContent = "Nope. I do.";
+  else if (answer2 == "NO") {one.className = 'wrong';
+    one.textContent = "You said " + answer2 + ". Nope. I do have brown hair.";
   }
 
 }
 
-
-
-
 function question6(){
+  halfOne.textContent = "Sixth quetion: I'm thinking of a number between 1 and 10. Take a guess."
+
   var theNumber = 4;
   var userGuess = parseInt(prompt("I'm thinking of a number from 1 to 10."));
   console.log(userGuess);
 
   while(userGuess !== theNumber){
-    if(userGuess > theNumber){six.className = 'wrong'; six.textContent = 'Too high.';
+    if(userGuess > theNumber){one.className = 'wrong'; one.textContent = 'You said ' + userGuess + ' Too high.';
     userGuess = parseInt(prompt("Guess again. Too high."));
     console.log(userGuess);
-  } else if (userGuess < theNumber){ six.className = 'wrong'; six.textContent = "Guess again. Too low.";
+  } else if (userGuess < theNumber){ one.className = 'wrong'; one.textContent = " You said " + userGuess + " Too low.";
       userGuess = parseInt(prompt("Guess again. Too low."));
       console.log(userGuess);
   }
 
-  while(userGuess === theNumber){six.className = 'right'; six.textContent = "Yep. You read my mind.";
+  while(userGuess === theNumber){one.className = 'right'; one.textContent = "Yep. You read my mind.";counter ++; oneHalf.textContent = "You have " + counter + " correct.";
     console.log("Yep. That's it. You read my mind.")
-
     break;
   }
 }
+
 }
 
-
-
-
 function question7(){
+
+  halfOne.textContent = "Last question: Name a lead singer of Van Halen.";
 
   var question = prompt("Name a lead singer of Van Halen").toUpperCase();
 
@@ -134,13 +134,14 @@ function question7(){
     )
 
      {
-       seven.className = 'right';
-      seven.textContent = "Yep. You know your 80s rock bands that go through lead singers.";
+       one.className = 'right';
+      one.textContent = "Yep. You know your 80s rock bands that go through lead singers.";
 
-      break;} else {seven.className = 'wrong'; seven.textContent = "No, he's not. At least that I know of. Maybe as of now he is though. It's possible.";
+      break;} else {one.className = 'wrong'; one.textContent = "Nope. Not " + question + ".";
     question = prompt('Try again.').toUpperCase();
   }};
 
+two.textContent = "That's it. You now know stuff about me and, I guess, Van Halen."; counter ++; oneHalf.textContent = "You have " + counter + " correct.";
 };
 
 
