@@ -93,30 +93,31 @@ function question5(){
 }
 
 
+
+
 function question6(){
-var answer = 7;
-console.log(answer);
+  var theNumber = 4;
+  var userGuess = parseInt(prompt("I'm thinking of a number from 1 to 10."));
+  console.log(userGuess);
 
-  var user = parseInt(prompt("I'm thinking of a number between 1 and 10."));
+  while(userGuess !== theNumber){
+    if(userGuess > theNumber){six.className = 'wrong'; six.textContent = 'Too high.';
+    userGuess = parseInt(prompt("Guess again. Too high."));
+    console.log(userGuess);
+  } else if (userGuess < theNumber){ six.className = 'wrong'; six.textContent = "Guess again. Too low.";
+      userGuess = parseInt(prompt("Guess again. Too low."));
+      console.log(userGuess);
+  }
 
-console.log(user);
+  while(userGuess === theNumber){six.className = 'right'; six.textContent = "Yep. You read my mind.";
+    console.log("Yep. That's it. You read my mind.")
 
-while (user > answer) {six.className = 'wrong'; six.textContent = "Too high.";
-  user = parseInt(prompt('You said ' + user + ' Guess again. Too high.'));
-}
-
-
-while (user < answer) {six.className = 'wrong'; six.textContent = "Too low.";
-  user = parseInt(prompt('You said ' + user + ' Guess again. Too low.'));
-
-}
-
-
-if (user === answer) {six.className ='right';
-  six.textContent = "Yep. You read my mind.";
-
+    break;
+  }
 }
 }
+
+
 
 
 function question7(){
@@ -132,17 +133,15 @@ function question7(){
       (question === answers[0]) || (question === answers[1]) || (question === answers[2]) || (question === answers[3]) || (question === answers[4]) || (question === answers[5])
     )
 
-     {seven.className = 'right';
+     {
+       seven.className = 'right';
       seven.textContent = "Yep. You know your 80s rock bands that go through lead singers.";
 
-      break;}
-
-    else {seven.className = 'wrong'; seven.textContent = "No, he's not. At least that I know of. Maybe as of now he is though. It's possible.";
+      break;} else {seven.className = 'wrong'; seven.textContent = "No, he's not. At least that I know of. Maybe as of now he is though. It's possible.";
     question = prompt('Try again.').toUpperCase();
   }};
 
 };
-
 
 
 question1();
